@@ -14,12 +14,12 @@
   $.fn.contarChar = function(options){
 
     var defaults = {
-      limitTo: 140,
-      warnAt: 25,
-      container: 'span',
+      limitTo:        140,
+      warnAt:         30,
+      container:      'span',
       containerClass: 'counter',
-      warningClass: 'warning',
-      counterText: ''
+      warningClass:   'warning',
+      counterText:    ''
     };
 
     var options = $.extend(defaults, options);
