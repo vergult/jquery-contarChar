@@ -1,0 +1,89 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>contarChar jQuery plugin</title>
+  <meta name="description" content="contarChar jQuery plugin" />
+
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="jquery.contarChar.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#textarea1").contarChar();
+      $("#textarea2").contarChar({
+        limitTo: 80,
+        warnAt: 40,
+        counterText: 'Remaining: '
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      margin:0;
+      padding:20px 40px;
+      background:#fff;
+      font:80% Arial, Helvetica, sans-serif;
+      color:#333;
+      line-height:180%;
+    }
+    h1 {
+      font-size:180%;
+      font-weight:normal;
+    }
+    h2 {
+      font-size:160%;
+      font-weight:normal;
+    }
+    form {
+      width:500px;
+    }
+    label {
+      display:block;
+      font-size:14px;
+    }
+    textarea {
+      width:490px;
+      height:60px;
+      border:1px solid #ccc;
+      padding:3px;
+      color:#333;
+      font:16px Arial, Helvetica, sans-serif;
+    }
+    form div {
+      position:relative;
+      margin:1em 0;
+    }
+    form .counter {
+      position:absolute;
+      right:0;
+      top:0;
+      font-size:20px;
+      font-weight:bold;
+      color:#ccc;
+    }
+    form .warning {
+      color:#700;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>jQuery plugin: contarChar</h1>
+  <form id="form" method="post" action="">
+    <h2>Default Settings</h2>
+    <div>
+      <label for="textarea1">Message</label>
+      <textarea id="textarea1" name="textarea1"></textarea>
+    </div>
+
+    <h2>Custom Settings</h2>
+    <div>
+      <label for="textarea2">Another message (limited to 80, warning at 40)</label>
+      <textarea id="textarea2" name="textarea2"></textarea>
+    </div>
+  </form>
+</body>
+</html>
+
+
